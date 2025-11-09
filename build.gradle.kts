@@ -1,11 +1,6 @@
-plugins {
-    kotlin("android") version "1.9.20" apply false
-    id("com.android.application") version "8.1.2" apply false
-}
+// Minimal root build file — module-specific plugins are applied in app/build.gradle.kts
 
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
+// Optional: common buildscript configuration or tasks can go here.
+tasks.register("clean", Delete::class) {
+    delete(rootProject.buildDir)
 }
